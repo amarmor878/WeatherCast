@@ -45,7 +45,7 @@ export const Browser = () => {
     //se filtra la lista de ciudades por el texto del buscador y se almacena en el estado buscador
     let resultado = listaCiudad.filter(
       (ciudad) => ciudad.nombre.indexOf(texto) === 0
-    ); 
+    );
     setBuscador(resultado);
   }, [texto]);
 
