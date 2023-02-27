@@ -1,9 +1,10 @@
 import React from 'react'
+import { OpcionesBuscadorStyled } from '../styles/OpcionesBuscadorStyled'
 
 export const OpcionesBuscador = ({ nombre, handleFin }) => {
   return (
     <div>
-      <p className='opcionesBuscador' onClick={(() => handleFin(nombre))}>{nombre}</p>
+      <OpcionesBuscadorStyled onClick={(() => handleFin(nombre))}>{nombre}</OpcionesBuscadorStyled>
     </div>
   )
 }

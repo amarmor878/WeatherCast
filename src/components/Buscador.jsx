@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import OpcionesBuscador from "./OpcionesBuscador";
 import { helpHttps } from "../helper/helpHttps";
-
+import { BuscadorStyled, BuscadorContenedorStyled, BuscadorOpcionStyled } from "../styles/BuscadorStyled";
 const api = helpHttps();
 let listaCiudad = null;
 
@@ -55,21 +55,22 @@ export const Buscador = ({ handleCiudad }) => {
 
   return (
     <div>
-      <input
-        type="buscador"
-        placeholder="Municipio"
-        name="ciudadBuscador"
-        value={texto}
-        onChange={handleChange}
-        id="buscador"
-        onKeyDown={(e) => e.key === 'Enter' && handleFin(texto)}
-      />
-      <div className="opcionesBuscador">
-        {buscador &&
-          buscador.map(
-            (elemento, index) => index < 8 && <OpcionesBuscador key={index} nombre={elemento.nombre} handleFin={handleFin} />
-          )}
-      </div>
+      <BuscadorStyled>
+        <BuscadorContenedorStyled>
+          <input
+            type="buscador"
+            placeholder="Municipio"
+            name="ciudadBuscador"
+            value={texto}
+            onChange={handleChange}
+            id="buscador"
+            onKeyDown={(e) => e.key === 'Enter' && handleFin(texto)}
+          />
+        </BuscadorContenedorStyled>
+      </BuscadorStyled>
+      <BuscadorOpcionStyled>
+        {buscador && buscador.map((elemento, index) => index < 8 && <OpcionesBuscador key={index} nombre={elemento.nombre} handleFin={handleFin} />)}
+      </BuscadorOpcionStyled>
     </div>
   );
 };

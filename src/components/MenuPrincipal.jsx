@@ -14,9 +14,9 @@ export const MenuPrincipal = () => {
   }
 
   useEffect(() => {
-    if (!ciudad) {
-      return;
-    }
+    if (!ciudad) return;
+
+    //Consultamos a la API para obtener los datos de la provincia y cuidad seleccionados.
     let url = `https://www.el-tiempo.net/api/json/v2/provincias/${ciudad.idProvincia}/municipios/${ciudad.idCiudad}`;
     api.get(url).then((res) => {
       if (!res.err) {
@@ -28,7 +28,7 @@ export const MenuPrincipal = () => {
   }, [ciudad]);
 
   return (
-    <div>
+    <div className="menuPrincipal">
       <Buscador handleCiudad={handleCiudad} />
       {dato && <TiempoCiudad dato={dato} nombreCiudad={ciudad.nombre} />}
     </div>);
