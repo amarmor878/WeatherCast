@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import OpcionesBuscador from "./OpcionesBuscador";
-import helpHttps from "../helper/helpHttps";
+import { helpHttps } from "../helper/helpHttps";
 
 const api = helpHttps(); //helper para peticiones https con fetch
 let listaCiudad = null; //variable global para almacenar la lista de ciudades
@@ -68,7 +68,7 @@ export const Buscador = () => {
       <div className="opcionesBuscador">
         {buscador &&
           buscador.map(
-            (el, i) => i < 8 && <OpcionesBuscador key={i} nombre={el.nombre} />
+            (elemento, index) => index < 8 && <OpcionesBuscador key={index} nombre={elemento.nombre} />
           )}
       </div>
     </div>
