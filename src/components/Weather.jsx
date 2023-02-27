@@ -1,5 +1,5 @@
 import React from "react";
-import MainMenu from "./MainMenu";
+import MainMenu from "./MenuPrincipal";
 
 //Renderizado del componente MainMenu en el DOM
 export const Weather = () => {

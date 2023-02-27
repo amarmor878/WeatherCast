@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
-import BrowserOptions from "./BrowserOptions";
+import OpcionesBuscador from "./OpcionesBuscador";
 import helpHttps from "../helper/helpHttps";
 
 const api = helpHttps(); //helper para peticiones https con fetch
 let listaCiudad = null; //variable global para almacenar la lista de ciudades
 
 //Componente que renderiza el buscador de ciudades
-export const Browser = () => {
+export const Buscador = () => {
   const [texto, setTexto] = useState(""); //estado para el texto del buscador
   const [buscador, setBuscador] = useState([]); //estado para el resultado del buscador
 
-  //funcion para obtener la lista de ciudades y almacenarla en la variable global listaCiudad
+  //Funcion para obtener la lista de ciudades y almacenarla en la variable global listaCiudad
   const getListaCiudades = () => {
     let url = "https://www.el-tiempo.net/api/json/v2/municipios";
 
@@ -68,11 +68,11 @@ export const Browser = () => {
       <div className="opcionesBuscador">
         {buscador &&
           buscador.map(
-            (el, i) => i < 8 && <BrowserOptions key={i} nombre={el.nombre} />
+            (el, i) => i < 8 && <OpcionesBuscador key={i} nombre={el.nombre} />
           )}
       </div>
     </div>
   );
 };
 
-export default Browser;
+export default Buscador;
