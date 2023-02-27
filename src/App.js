@@ -1,4 +1,3 @@
-import "./App.css";
 import Tiempo from "./components/Tiempo";
 
 function App() {

@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const OpcionesBuscador = ({ nombre }) => {
+export const OpcionesBuscador = ({ nombre, handleFin }) => {
   return (
     <div>
-      <p className='opcionesBuscador'>{nombre}</p>
+      <p className='opcionesBuscador' onClick={(() => handleFin(nombre))}>{nombre}</p>
     </div>
   )
 }
