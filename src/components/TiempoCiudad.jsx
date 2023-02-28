@@ -14,7 +14,10 @@ export const TiempoCiudad = ({ dato, nombreCiudad, handleCiudadesFavoritas, borr
     }
     return (
         <TCStyle>
-            {/*{ciudadEnFavoritos() ? <TCImgFav onClick={() => borrarCiudad(idCiudad)} src='https://user-images.githubusercontent.com/100948149/221852997-d5499012-4fb8-470b-86d1-d9607d232f65.png' alt='Ciudad en favoritos' /> : <TCImgFav onClick={() => handleCiudadesFavoritas(idProvincia, idCiudad)} src='https://user-images.githubusercontent.com/100948149/221852914-6b3fc9d6-e78f-40a2-ae59-8022d631edca.png' alt='Ciudad no en favoritos' />}*/}
+            {/*
+            {ciudadEnFavoritos() ? <TCImgFav onClick={() => borrarCiudad(idCiudad)} src='https://user-images.githubusercontent.com/100948149/221852997-d5499012-4fb8-470b-86d1-d9607d232f65.png' alt='Ciudad en favoritos' /> : 
+            <TCImgFav onClick={() => handleCiudadesFavoritas(idProvincia, idCiudad)} src='https://user-images.githubusercontent.com/100948149/221852914-6b3fc9d6-e78f-40a2-ae59-8022d631edca.png' alt='Ciudad no en favoritos' />}
+            */}
             <TCPrincipal>
                 <TCNombre>{nombreCiudad}</TCNombre>
                 <TCTempActual>{temperatura_actual} ºC</TCTempActual>
