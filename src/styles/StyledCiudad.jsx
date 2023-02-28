@@ -71,16 +71,25 @@ export const TCTempMin = styled.h4`
 `;
 
 export const TCVientoLluvia = styled.div`
-  display: inline-block;
+  display: flex;
+  align-items: center;
   margin-left: 15px;
 `;
 
 export const TCViento = styled.h4`
   font-family: 'Akshar', sans-serif;
+  margin-right: 10px;
+  margin-left: 20px;
 `;
 
 export const TCLluvia = styled.h4`
   font-family: 'Akshar', sans-serif;
+  margin-right: 10px;
+  margin-left: 20px;
+`;
+
+export const TCImg = styled.img`
+  margin-left: 10px;
 `;
 
 export const TCDescrip = styled.h2`

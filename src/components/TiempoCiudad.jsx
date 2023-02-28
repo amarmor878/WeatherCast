@@ -1,7 +1,7 @@
 import React from 'react'
 import { PronosticoTiempoCiudad } from './PronosticoTiempoCiudad';
 import {
-    TCStyle, TCPrincipal, TCNombre, TCTempActual, TCTemp, TCTempMax,
+    TCStyle, TCPrincipal, TCNombre, TCTempActual, TCTemp, TCTempMax, TCImg,
     TCTempMin, TCVientoLluvia, TCViento, TCLluvia, TCDescrip, PronTitulo, TCImgFav
 } from '../styles/StyledCiudad';
 
@@ -23,8 +23,10 @@ export const TiempoCiudad = ({ dato, nombreCiudad, handleCiudadesFavoritas, borr
                     <TCTempMin>{temperaturas.min} ºC</TCTempMin>
                 </TCTemp>
                 <TCVientoLluvia>
-                    <TCViento>{viento} km/h <img src='https://raw.githubusercontent.com/Makin-Things/weather-icons/master/animated/wind.svg' alt='Velocidad del viento' /></TCViento>
-                    <TCLluvia>{lluvia}% <img src='https://raw.githubusercontent.com/Makin-Things/weather-icons/master/animated/rainy-1-day.svg' alt='Probabilidad de lluvia' /></TCLluvia>
+                    <TCImg src='https://raw.githubusercontent.com/Makin-Things/weather-icons/master/animated/wind.svg' alt='Velocidad del viento' />
+                    <TCViento>{viento} km/h</TCViento>
+                    <TCImg src='https://raw.githubusercontent.com/Makin-Things/weather-icons/master/animated/rainy-1-day.svg' alt='Probabilidad de lluvia' />
+                    <TCLluvia>{lluvia}%</TCLluvia>
                 </TCVientoLluvia>
                 <TCDescrip>{stateSky.description}</TCDescrip>
             </TCPrincipal>
