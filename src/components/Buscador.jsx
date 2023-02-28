@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import OpcionesBuscador from "./OpcionesBuscador";
 import { helpHttps } from "../helper/helpHttps";
-import { BuscadorStyled, BuscadorContenedorStyled, BuscadorOpcionStyled } from "../styles/BuscadorStyled";
+import { Contenedor, BuscadorOpcion } from "../styles/StyledTiempo";
+
 const api = helpHttps();
 let listaCiudad = null;
 
@@ -55,8 +56,8 @@ export const Buscador = ({ handleCiudad }) => {
 
   return (
     <div>
-      <BuscadorStyled>
-        <BuscadorContenedorStyled>
+      <div className="buscador">
+        <Contenedor>
           <input
             type="buscador"
             placeholder="Municipio"
@@ -66,11 +67,11 @@ export const Buscador = ({ handleCiudad }) => {
             id="buscador"
             onKeyDown={(e) => e.key === 'Enter' && handleFin(texto)}
           />
-        </BuscadorContenedorStyled>
-      </BuscadorStyled>
-      <BuscadorOpcionStyled>
+        </Contenedor>
+      </div>
+      <BuscadorOpcion>
         {buscador && buscador.map((elemento, index) => index < 8 && <OpcionesBuscador key={index} nombre={elemento.nombre} handleFin={handleFin} />)}
-      </BuscadorOpcionStyled>
+      </BuscadorOpcion>
     </div>
   );
 };

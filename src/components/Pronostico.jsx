@@ -1,12 +1,13 @@
 import React from 'react'
+import { PronPrinci, PronTemp, PronLluvia, PronViento, PronVel } from '../styles/StyledPronostico'
 
 export const Pronostico = ({ temp, lluvia, velocidadViento, hora }) => {
     return (
-        <div>
-            <h4>{temp} ºC</h4>
-            <h4>{lluvia} % de lluvias</h4>
-            <h4>{velocidadViento} km/h</h4>
-            <h4>{hora > 9 ? hora : "0" + hora}:00</h4>
-        </div>
+        <PronPrinci>
+            <PronTemp>{temp} ºC</PronTemp>
+            <PronLluvia>{lluvia} % de lluvias</PronLluvia>
+            <PronViento>{velocidadViento} <span>km/h</span></PronViento>
+            <PronVel>{hora > 9 ? hora : "0" + hora}:00</PronVel>
+        </PronPrinci>
     )
 }

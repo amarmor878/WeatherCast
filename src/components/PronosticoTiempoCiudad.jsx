@@ -1,5 +1,6 @@
 import React from 'react'
 import { Pronostico } from './Pronostico';
+import { PronGrupo } from '../styles/StyledPronostico';
 
 export const PronosticoTiempoCiudad = ({ pronostico }) => {
     let horaInicial = 24 - pronostico.temperatura.length;
@@ -9,8 +10,9 @@ export const PronosticoTiempoCiudad = ({ pronostico }) => {
         viento: pronostico.viento[index],
         hora: horaInicial + index,
     }))
+
     return (
-        <div>
+        <PronGrupo>
             {listaDatos.map((elemento, index) => <Pronostico
                 key={index}
                 hora={elemento.hora}
@@ -18,7 +20,7 @@ export const PronosticoTiempoCiudad = ({ pronostico }) => {
                 lluvia={elemento.lluvia}
                 velocidadViento={elemento.viento.velocidad}
             />)}
-        </div>
+        </PronGrupo>
     )
 }
 

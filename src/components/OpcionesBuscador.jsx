@@ -1,10 +1,10 @@
 import React from 'react'
-import { OpcionesBuscadorStyled } from '../styles/OpcionesBuscadorStyled'
+import { BuscadorOpciones } from '../styles/StyledTiempo'
 
 export const OpcionesBuscador = ({ nombre, handleFin }) => {
   return (
     <div>
-      <OpcionesBuscadorStyled onClick={(() => handleFin(nombre))}>{nombre}</OpcionesBuscadorStyled>
+      <BuscadorOpciones onClick={(() => handleFin(nombre))}>{nombre}</BuscadorOpciones>
     </div>
   )
 }
