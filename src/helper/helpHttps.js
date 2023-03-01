@@ -1,4 +1,3 @@
-// Esta función define una utilidad para hacer peticiones HTTP utilizando la API Fetch
 export const helpHttps = () => {
   // Definimos una función interna que usaremos para realizar la petición
   const customFetch = async (endpoint, options) => {

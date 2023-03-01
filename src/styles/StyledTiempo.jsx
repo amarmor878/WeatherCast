@@ -54,17 +54,22 @@ export const Contenedor = styled.div`
 `
 
 export const BuscadorOpcion = styled.div`
-    width: 78%;
+    width: 81.5%;
     height: 1px;
-    justify-content: center;
     margin-top: -20px;
+    justify-content: center;
 
     @media only screen and (max-width: 900px){
         width: 310px;
+        margin-left: 25%;
+        justify-content: center;
     }
     
     @media only screen and (max-width: 600px) {
         width: 270px;
+        height: 1px;
+        justify-content: center;
+        margin-top: -20px;
     }
 `
 

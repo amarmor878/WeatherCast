@@ -6,7 +6,7 @@ import {
 } from '../styles/StyledCiudad';
 
 export const TiempoCiudad = ({ dato, nombreCiudad, handleCiudadesFavoritas, borrarCiudad, idProvincia, idCiudad }) => {
-    const { lluvia, pronostico, stateSky, temperatura_actual, temperaturas, viento } = dato;
+    const { lluvia, pronostico, stateSky, temperatura_actual, temperaturas, viento, precipitacion } = dato;
 
     const ciudadEnFavoritos = () => {
         let listaFavoritos = JSON.parse(localStorage.setItem("ciudadesFavoritas")).map((ciudad) => ciudad.idCiudad === idCiudad ? true : false);
@@ -29,7 +29,7 @@ export const TiempoCiudad = ({ dato, nombreCiudad, handleCiudadesFavoritas, borr
                     <TCImg src='https://raw.githubusercontent.com/Makin-Things/weather-icons/master/animated/wind.svg' alt='Velocidad del viento' />
                     <TCViento>{viento} km/h</TCViento>
                     <TCImg src='https://raw.githubusercontent.com/Makin-Things/weather-icons/master/animated/rainy-1-day.svg' alt='Probabilidad de lluvia' />
-                    <TCLluvia>{lluvia}%</TCLluvia>
+                    <TCLluvia>{precipitacion} %</TCLluvia> {/*//TODO Cambiar a lluvia*/}
                 </TCVientoLluvia>
                 <TCDescrip>{stateSky.description}</TCDescrip>
             </TCPrincipal>
